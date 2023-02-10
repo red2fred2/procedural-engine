@@ -25,11 +25,11 @@ fn main() {
 /**
  * The actual main function after a window is created
  */
-fn init(window_input_tx: Sender<WindowInput>, window_output_rx: Receiver<WindowOutput>) {
+fn init(window_input: Sender<WindowInput>, window_output: Receiver<WindowOutput>) {
 
 	// Just read off the frame dt to test
 	loop {
-		let window_dt = window_output_rx.recv().unwrap().dt;
+		let window_dt = window_output.recv().unwrap().dt;
 		match window_dt {
 			Some(dt) => println!("Time since last window poll {} us", dt),
 			_ => ()
