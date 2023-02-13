@@ -4,4 +4,4 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-tao = "0.18.0"
+winit = "0.28.1"

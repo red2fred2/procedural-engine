@@ -1,15 +1,11 @@
 use std::sync::mpsc::{Sender, Receiver};
 
-use tao::{event_loop::{EventLoop, ControlFlow}, window::WindowBuilder, event::{Event, WindowEvent}};
-
-use super::frame_buffer::FrameBuffer;
+use winit::{event_loop::{EventLoop, ControlFlow}, window::WindowBuilder, event::{Event, WindowEvent}};
 
 /**
  * Descibes a window that can be rendered to.
  */
- pub struct WindowInput {
-	pub frame_buffer: FrameBuffer
-}
+ pub struct WindowInput {}
 
 pub struct WindowOutput {
 	/// Time since the last frame in microseconds
